@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "102bbeb6-adc4-4428-958d-5c5be8ecabdc",
+		"name": "TaskManagerAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41272736"
+	},
+	"item": [
+		{
+			"name": "GET /tasks",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Fetch All Tasks",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://efa29c2f-25d1-490c-897e-330106b8afdd.mock.pstmn.io/tasks",
+							"protocol": "https",
+							"host": [
+								"efa29c2f-25d1-490c-897e-330106b8afdd",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[\r\n  {\r\n    \"id\": 1,\r\n    \"assignedTo\": \"John Doe\",\r\n    \"status\": \"In Progress\",\r\n    \"dueDate\": \"2023-10-15\",\r\n    \"priority\": \"High\",\r\n    \"comments\": \"Finish the report\"\r\n  },\r\n  {\r\n    \"id\": 2,\r\n    \"assignedTo\": \"Jane Smith\",\r\n    \"status\": \"Completed\",\r\n    \"dueDate\": \"2023-10-10\",\r\n    \"priority\": \"Medium\",\r\n    \"comments\": \"Review the design\"\r\n  }\r\n]"
+				}
+			]
+		},
+		{
+			"name": "POST /tasks",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Add New Task",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://efa29c2f-25d1-490c-897e-330106b8afdd.mock.pstmn.io/tasks",
+							"protocol": "https",
+							"host": [
+								"efa29c2f-25d1-490c-897e-330106b8afdd",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n  \"id\": 3,\r\n  \"assignedTo\": \"Alice\",\r\n  \"status\": \"Pending\",\r\n  \"dueDate\": \"2023-10-20\",\r\n  \"priority\": \"Low\",\r\n  \"comments\": \"New task added\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "PUT /tasks/:id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Update Task",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://efa29c2f-25d1-490c-897e-330106b8afdd.mock.pstmn.io/tasks/1",
+							"protocol": "https",
+							"host": [
+								"efa29c2f-25d1-490c-897e-330106b8afdd",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n  \"id\": 1,\r\n  \"assignedTo\": \"John Doe\",\r\n  \"status\": \"Completed\",\r\n  \"dueDate\": \"2023-10-15\",\r\n  \"priority\": \"High\",\r\n  \"comments\": \"Report finalized\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "DELETE /tasks/:id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Delete Task",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://efa29c2f-25d1-490c-897e-330106b8afdd.mock.pstmn.io/tasks/1",
+							"protocol": "https",
+							"host": [
+								"efa29c2f-25d1-490c-897e-330106b8afdd",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n  \"message\": \"Task deleted successfully\"\r\n}"
+				}
+			]
+		}
+	]
+}
